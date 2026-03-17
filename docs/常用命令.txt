@@ -1,0 +1,13 @@
+# 打开学习计划文档
+code docs/agent-dev-learning-plan.md
+
+# 打开今日学习日志
+code learning-logs/$(Get-Date -Format "yyyy-MM-dd").md
+
+# 提交今日学习成果
+git add .
+git commit -m "学习日志: $(Get-Date -Format 'yyyy-MM-dd')"
+git push origin main
+
+# 验证环境
+python scripts/verify_env.py
