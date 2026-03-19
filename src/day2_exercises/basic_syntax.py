@@ -193,7 +193,7 @@ def simple_calculator():
             print("感谢使用计算器！")
             break
 
-
+#数字统计
 def getNum():
     num = 0
     for i in range(1,1000):
@@ -210,6 +210,7 @@ def getNum():
     print(count)  # 输出: 467
 
 
+#奇偶判断
 def panDuanJiOu():
     while True:
         num1 = int(input("请输入数字："))
@@ -218,12 +219,36 @@ def panDuanJiOu():
         else:
             print(f"{num1}为一个奇数")
 
+#字符串反转
 def fanZhuanZiFuChuan():
     str = input(f"请输入一个字符串：")
     char = ""
     for i in str:
         char = i + char
     print(char)
+    """
+    🥇 方法一：切片（最推荐，Python 独有绝技）
+    这是 Python 最强大的特性之一，一行代码搞定。
+    s = "Agent开发"
+    result = s[::-1]
+
+    print(result) 
+    # 输出: 发开tnegA
+    恩哥原理解析：
+    语法是 [start:stop:step]。
+    当 step（步长）为 -1 时，Python 就知道：“嘿，从后往前，一个一个取！”
+    优点：代码最少，执行速度最快，资深开发都这么写。
+    🥈 方法二：使用 reversed() 函数（最规范）
+    如果你觉得切片太 “魔术”，看不懂，用这个函数式写法，可读性最好。
+    s = "Agent开发"
+    result = "".join(reversed(s))
+
+    print(result)
+    # 输出: 发开tnegA
+    恩哥原理解析：
+    reversed(s)：返回一个反向的迭代器（倒序的字符流）。
+    "".join(...)：用空字符串把这些字符重新拼起来。
+    """
 
 
 if __name__ == "__main__":
